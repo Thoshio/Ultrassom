@@ -12,6 +12,11 @@
 #include <stdint.h>
 #include "MKL25Z4.h"
 
+// ==== Input Capture Mode (TPM) ====
+#define TPM_INPUT_CAPTURE_RISING  (TPM_CnSC_ELSA_MASK)                            // Captura borda de subida
+#define TPM_INPUT_CAPTURE_FALLING (TPM_CnSC_ELSB_MASK)                            // Captura borda de descida
+#define TPM_INPUT_CAPTURE_BOTH    (TPM_CnSC_ELSA_MASK | TPM_CnSC_ELSB_MASK)       // Captura ambas
+#define TPM_CHANNEL_INTERRUPT     (TPM_CnSC_CHIE_MASK)                            // Habilita interrupção
  
 // TPM clock source select
 // Selects the clock source for the TPM counter clock
